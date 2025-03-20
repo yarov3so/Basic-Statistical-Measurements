@@ -35,7 +35,7 @@ st.markdown(f"Sorted in ascending order, they are: {[try_int(el) for el in sorte
 st.text("")
 
 st.markdown(f"**Range:**")
-st.markdown(f"Range = Maximum value - Minimum value = {max(data)} - {min(data)} = **{max(data)-min(data)}**")
+st.markdown(f"Range = Maximum value - Minimum value = {try_int(max(data))} - {try_int(min(data))} = **{try_int(max(data)-min(data))}**")
 
 st.text("")
 
@@ -50,7 +50,7 @@ st.text("")
 
 mean_div_calc=""
 for val in data:
-    mean_div_calc+=" | "+f"{val} - "+f"{mean_data} |  + "
+    mean_div_calc+=" | "+f"{try_int(val)} - "+f"{try_int(round(mean_data,2))} |  + "
 mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{round((sum(abs(data-mean_data*np.ones(len(data)))))/len(data),2)}**"
 
 st.markdown("**Mean Deviation:**")
