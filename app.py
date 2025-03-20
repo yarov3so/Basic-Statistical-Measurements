@@ -62,8 +62,8 @@ st.markdown("**Median:**")
 
 if len(data)%2==0:
     st.markdown(f"Your data set has an even number of entries. Therefore, the median is the mean of the two middle terms:")
-    median_calc=f" ( {sorted(data)[-1+len(data)//2]} + {sorted(data)[len(data)//2]} ) / 2  =  **{median_data}**"
-    st.markdown(f"Median = {median_calc}")
+    median_calc=f" ( {try_int(sorted(data)[-1+len(data)//2])} + {try_int(sorted(data)[len(data)//2])} ) / 2  =  **{try_int(median_data)}**"
+    st.markdown(f"Median = {try_int(round(median_calc,2))}")
 else:
     st.markdown("Your data set has an odd number of entries. Therefore, the median is the middle term:")
     median_calc=f"**{sorted(data)[len(data)//2]}**"
@@ -94,6 +94,6 @@ st.markdown("**Mode:**")
 if len(modes)==len(data):
     st.markdown("Your data set has no mode, as all the entries are distinct.")
 elif len(modes)==1:
-    st.markdown(f"The mode of your data set is {modes[0]}")
+    st.markdown(f"The mode of your data set is **{modes[0]}**")
 else:
     st.markdown(f"Your data set has the following modes: {modes_str}")
