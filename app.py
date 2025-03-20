@@ -30,7 +30,7 @@ st.text("")
 
 st.markdown(f"Your data set has **{len(data)}** entries.")
 
-st.markdown(f"Sorted in ascending order, they are: {sorted(data)}"
+st.markdown(f"Sorted in ascending order, they are: {sorted(data)}")
 
 st.text("")
 
