@@ -32,11 +32,11 @@ st.text(f"Your data set has {len(data)} values.")
 
 st.text("")
 
-st.text(f"Range:  Max - Min = {max(data)} - {min(data)} = {max(data)-min(data)}")
+st.text(f"Range:  Maximum value - Minimum value = {max(data)} - {min(data)} = {max(data)-min(data)}")
 
 st.text("")
 
-mean_calc="Mean: ""( "+(" + ".join([try_int(val) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"{mean_data}"
+mean_calc="Mean: ""( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"{mean_data}"
 st.text(f"{mean_calc}")
 
 st.text("")
