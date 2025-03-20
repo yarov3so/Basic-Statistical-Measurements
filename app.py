@@ -3,7 +3,7 @@ import statistics as stat
 import streamlit as st
 
 st.title("Basic Statistical Measurements")
-st.text("*by yarov3so*)")
+st.markdown("*by yarov3so*")
 
 data_str=st.text_input("Please enter the values of all the entries in your data set, separated by commas:")
 
