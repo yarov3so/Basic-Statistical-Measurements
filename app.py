@@ -32,7 +32,7 @@ st.markdown(f"Your data set has **{len(data)}** values.")
 
 st.text("")
 
-st.text(f"Range:  Maximum value - Minimum value = {max(data)} - {min(data)} = {max(data)-min(data)}")
+st.markdown(f"Range:  Maximum value - Minimum value = {max(data)} - {min(data)} = {round(max(data)-min(data),2)}")
 
 st.text("")
 
