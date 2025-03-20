@@ -55,7 +55,7 @@ st.text("Median:")
 if len(data)%2==0:
     st.text(f"Your data set has an even number of entries. Therefore, the median is the mean of the two middle terms:")
     median_calc=f" ( {sorted(data)[-1+len(data)//2]} + {sorted(data)[len(data)//2]} ) / 2  =  {median_data}"
-    st.text(f"Median: {median_calc}}"
+    st.text(f"Median: {median_calc}"
 else:
     st.text("Your data set has an odd number of entries. Therefore, the median is the middle term:")
     median_calc=f" {sorted(data)[len(data)//2]}"
