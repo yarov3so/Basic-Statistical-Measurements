@@ -51,20 +51,21 @@ for val in data:
     mean_div_calc+=" | "+f"{val} - "+f"{mean_data} |  + "
 mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{(sum(abs(data-mean_data*np.ones(len(data)))))/len(data)}**"
 
-st.markdown(f"Mean deviation = {mean_div_calc}")
+st.markdown("**Mean Deviation:**")
+st.markdown(f"Mean Deviation = {mean_div_calc}")
 
 st.text("")
 
-st.text("Median:")
+st.markdown("**Median:**")
 
 if len(data)%2==0:
-    st.text(f"Your data set has an even number of entries. Therefore, the median is the mean of the two middle terms:")
-    median_calc=f" ( {sorted(data)[-1+len(data)//2]} + {sorted(data)[len(data)//2]} ) / 2  =  {median_data}"
-    st.text(f"Median: {median_calc}")
+    st.markdown(f"Your data set has an even number of entries. Therefore, the median is the mean of the two middle terms:")
+    median_calc=f" ( {sorted(data)[-1+len(data)//2]} + {sorted(data)[len(data)//2]} ) / 2  =  **{median_data}**"
+    st.markdown(f"Median = {median_calc}")
 else:
-    st.text("Your data set has an odd number of entries. Therefore, the median is the middle term:")
-    median_calc=f" {sorted(data)[len(data)//2]}"
-    st.text(f"Median: {median_calc}")
+    st.markdown("Your data set has an odd number of entries. Therefore, the median is the middle term:")
+    median_calc=f"**{sorted(data)[len(data)//2]}**"
+    st.markdown(f"Median = {median_calc}")
 
 st.text("")
 
@@ -80,11 +81,12 @@ def count(data,value):
 counts=[count(data,value) for value in data]
 max_count=max(counts)
 modes=[try_int(val) for val in data if count(data,val)==max_count]
-modes=sorted(list(set(modes)))
+modes=[ f"**{mode}**" in sorted(list(set(modes)))]
 
+st.markdown("**Mode:**")
 if len(modes)==len(data):
-    st.text("Your data set has no mode.")
+    st.markdown("Your data set has no mode.")
 elif len(modes)==1:
-    st.text(f"The mode of your data set is {modes[0]}")
+    st.markdown(f"The mode of your data set is {modes[0]}")
 else:
-    st.text(f"Your data set has the following modes: {modes}")
+    st.markdown(f"Your data set has the following modes: {modes}")
