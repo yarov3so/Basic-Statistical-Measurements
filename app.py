@@ -92,7 +92,7 @@ modes_str=modes_str[:-2]
 
 st.markdown("**Mode:**")
 if len(modes)==len(data):
-    st.markdown("Your data set has no mode.")
+    st.markdown("Your data set has no mode, as all the entries are distinct.")
 elif len(modes)==1:
     st.markdown(f"The mode of your data set is {modes[0]}")
 else:
