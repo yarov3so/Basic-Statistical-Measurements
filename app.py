@@ -39,7 +39,8 @@ st.text("")
 mean_data=round(mean_data,2)
 mean_data=try_int(mean_data)
 
-mean_calc="**Mean:** \n ""( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"{mean_data}"
+mean_calc="( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"{mean_data}"
+st.markdown("**Mean:**")
 st.markdown(f"{mean_calc}")
 
 st.text("")
