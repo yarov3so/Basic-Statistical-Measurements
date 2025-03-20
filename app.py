@@ -51,7 +51,7 @@ st.text("")
 mean_div_calc=""
 for val in data:
     mean_div_calc+=" | "+f"{try_int(val)} - "+f"{try_int(round(mean_data,2))} |  + "
-mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{round((sum(abs(data-mean_data*np.ones(len(data)))))/len(data),2)}**"
+mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{try_int(round((sum(abs(data-mean_data*np.ones(len(data)))))/len(data),2))}**"
 
 st.markdown("**Mean Deviation:**")
 st.markdown(f"Mean Deviation = {mean_div_calc}")
