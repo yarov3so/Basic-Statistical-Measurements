@@ -63,7 +63,7 @@ st.markdown("**Median:**")
 if len(data)%2==0:
     st.markdown(f"Your data set has an even number of entries. Therefore, the median is the mean of the two middle terms:")
     median_calc=f" ( {try_int(sorted(data)[-1+len(data)//2])} + {try_int(sorted(data)[len(data)//2])} ) / 2  =  **{try_int(median_data)}**"
-    st.markdown(f"Median = {try_int(round(median_calc,2))}")
+    st.markdown(f"Median = {median_calc}")
 else:
     st.markdown("Your data set has an odd number of entries. Therefore, the median is the middle term:")
     median_calc=f"**{sorted(data)[len(data)//2]}**"
