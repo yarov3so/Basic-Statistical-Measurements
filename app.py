@@ -32,25 +32,26 @@ st.markdown(f"Your data set has **{len(data)}** values.")
 
 st.text("")
 
-st.markdown(f"**Range:**  Maximum value - Minimum value = {max(data)} - {min(data)} = **{max(data)-min(data)}**")
+st.markdown(f"**Range:**")
+st.markdown(f"Range = Maximum value - Minimum value = {max(data)} - {min(data)} = **{max(data)-min(data)}**")
 
 st.text("")
 
 mean_data=round(mean_data,2)
 mean_data=try_int(mean_data)
 
-mean_calc="( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"{mean_data}"
+mean_calc="( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"**{mean_data}**"
 st.markdown("**Mean:**")
-st.markdown(f"{mean_calc}")
+st.markdown(f"Mean = {mean_calc}")
 
 st.text("")
 
 mean_div_calc=""
 for val in data:
     mean_div_calc+=" | "+f"{val} - "+f"{mean_data} |  + "
-mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  {(sum(abs(data-mean_data*np.ones(len(data)))))/len(data)}"
+mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{(sum(abs(data-mean_data*np.ones(len(data)))))/len(data)}**"
 
-st.text(f"Mean deviation: {mean_div_calc}")
+st.markdown(f"Mean deviation = {mean_div_calc}")
 
 st.text("")
 
