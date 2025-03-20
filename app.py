@@ -81,7 +81,7 @@ def count(data,value):
 counts=[count(data,value) for value in data]
 max_count=max(counts)
 modes=[try_int(val) for val in data if count(data,val)==max_count]
-modes=[ f"**{mode}**" in sorted(list(set(modes)))]
+modes=[ f"**{mode}**" for mode in sorted(list(set(modes)))]
 
 st.markdown("**Mode:**")
 if len(modes)==len(data):
