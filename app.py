@@ -5,7 +5,7 @@ import streamlit as st
 st.title("Basic Statistical Measurements")
 st.markdown("*by yarov3so*")
 
-data_str=st.text_input("Please enter the values of all the entries in your data set, separated by commas:")
+data_str=st.text_input("Please enter all the numerical entries that appear in your data set, separated by commas:")
 
 if data_str=="":
     st.stop()
@@ -28,7 +28,9 @@ median_data=stat.median(data)
 
 st.text("")
 
-st.markdown(f"Your data set has **{len(data)}** values.")
+st.markdown(f"Your data set has **{len(data)}** entries.")
+
+st.markdown(f"Sorted in ascending order, they are: {sorted(data)}"
 
 st.text("")
 
@@ -49,7 +51,7 @@ st.text("")
 mean_div_calc=""
 for val in data:
     mean_div_calc+=" | "+f"{val} - "+f"{mean_data} |  + "
-mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{(sum(abs(data-mean_data*np.ones(len(data)))))/len(data)}**"
+mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{round((sum(abs(data-mean_data*np.ones(len(data)))))/len(data),2)}**"
 
 st.markdown("**Mean Deviation:**")
 st.markdown(f"Mean Deviation = {mean_div_calc}")
