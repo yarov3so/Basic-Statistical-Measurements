@@ -44,7 +44,7 @@ st.text("")
 mean_div_calc=""
 for val in data:
     mean_div_calc+=" | "+f"{val} -"+f"{mean_data} |  + "
-mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(mean_data)}  =  {(sum(abs(data-mean_data*np.ones(len(data)))))/len(data)}"
+mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  {(sum(abs(data-mean_data*np.ones(len(data)))))/len(data)}"
 
 st.text(f"Mean deviation: {mean_div_calc}")
 
