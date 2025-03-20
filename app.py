@@ -32,12 +32,15 @@ st.markdown(f"Your data set has **{len(data)}** values.")
 
 st.text("")
 
-st.markdown(f"Range:  Maximum value - Minimum value = {max(data)} - {min(data)} = {round(max(data)-min(data),2)}")
+st.markdown(f"**Range**:  Maximum value - Minimum value = {max(data)} - {min(data)} = **{max(data)-min(data)}**")
 
 st.text("")
 
+mean_data=round(mean_data,2)
+mean_data=try_int(mean_data)
+
 mean_calc="Mean: ""( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"{mean_data}"
-st.text(f"{mean_calc}")
+st.markdown(f"{mean_calc}")
 
 st.text("")
 
