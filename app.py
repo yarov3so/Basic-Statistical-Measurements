@@ -28,7 +28,7 @@ median_data=stat.median(data)
 
 st.text("")
 
-st.text(f"Your data set has {len(data)} values.")
+st.markdown(f"Your data set has **{len(data)}** values.")
 
 st.text("")
 
@@ -74,7 +74,7 @@ def count(data,value):
 
 counts=[count(data,value) for value in data]
 max_count=max(counts)
-modes=[val for val in data if count(data,val)==max_count]
+modes=[try_int(val) for val in data if count(data,val)==max_count]
 modes=sorted(list(set(modes)))
 
 if len(modes)==len(data):
