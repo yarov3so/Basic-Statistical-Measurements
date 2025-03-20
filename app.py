@@ -5,7 +5,7 @@ import streamlit as st
 st.title("Basic Statistical Measurements")
 st.markdown("*by yarov3so*")
 
-data_str=st.text_input("Please enter all the numerical entries that appear in your data set, separated by commas:")
+data_str=st.text_input("Enter all the numerical entries that appear in your data set, separated by commas:")
 
 if data_str=="":
     st.stop()
