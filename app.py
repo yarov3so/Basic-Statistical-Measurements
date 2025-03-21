@@ -44,7 +44,7 @@ st.markdown(f"Sorted in ascending order, they are: $ {[try_int(el) for el in sor
 st.text("")
 
 st.markdown(f"**Range:**")
-st.markdown(f"Range = Maximum value - Minimum value = {try_int(max(data))} - {try_int(min(data))} = **{try_int(max(data)-min(data))}**")
+st.markdown(f"Range = Maximum value - Minimum value = $ {try_int(max(data))} - {try_int(min(data))} = \\textbf{{{try_int(max(data)-min(data))}}}$")
 
 st.text("")
 
