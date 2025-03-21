@@ -53,7 +53,7 @@ mean_data=try_int(mean_data)
 
 mean_calc="( "+(" + ".join([str(try_int(val)) for val in data]))+" )"+" / "+f"{len(data)}" + " = " + f"**{mean_data}**"
 st.markdown("**Mean:**")
-st.markdown(f"Mean = {mean_calc}")
+st.markdown(f"Mean $= \\frac{{ {mean_calc} }}{{ {len(data)} }}$")
 
 st.text("")
 
