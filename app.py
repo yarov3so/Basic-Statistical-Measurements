@@ -91,7 +91,7 @@ modes=[ mode for mode in sorted(list(set(modes)))]
 
 modes_str=""
 for mode in modes:
-    modes_str+=f"\\textbf{{ {mode}}} , "
+    modes_str+=f"\\textbf{{ {mode} }} , "
 modes_str=modes_str[:-2]
 
 st.markdown("$\\textbf{{Mode}} \\colon$")
