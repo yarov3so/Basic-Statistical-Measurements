@@ -94,7 +94,7 @@ for mode in modes:
     modes_str+=f"\\textbf{{ {mode}}}, "
 modes_str=modes_str[:-2]
 
-st.markdown("$\\textbf{{Mode \\colon}}$")
+st.markdown("$\\textbf{{Mode}} \\colon$")
 if len(modes)==len(data):
     st.markdown("Your data set has no mode, as all the entries are distinct.")
 elif len(modes)==1:
