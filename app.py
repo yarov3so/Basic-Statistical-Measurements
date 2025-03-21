@@ -43,13 +43,13 @@ st.markdown(f"Sorted in ascending order, they are: $ {[try_int(el) for el in sor
 
 st.text("")
 
-st.markdown(f"**Range:**")
+
 st.markdown(f"$\\text{{Range}} =$ Maximum value $-$ Minimum value $=  {try_int(max(data))} - {try_int(min(data))} = \\textbf{{{try_int(max(data)-min(data))}}}$")
 
 st.text("")
 
 mean_calc=" + ".join([str(try_int(val)) for val in data]) #+" )"+" / "+f"{len(data)}" + " = " + f"**{mean_data}**"
-st.markdown("**Mean:**")
+
 st.markdown(f"$\\text{{Mean}} = \\frac{{ {mean_calc} }}{{ {len(data)} }} = \\textbf{{ {try_int(mean_data)} }}$")
 
 st.text("")
@@ -59,12 +59,10 @@ for val in data:
     mean_div_calc+=" | "+f"{try_int(val)} - "+f"{try_int(mean_data)} |  + "
 mean_div_calc=mean_div_calc[:-2] #+f") / {len(data)}  =  **{try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data))}**"
 
-st.markdown("**Mean Deviation:**")
 st.markdown(f"$\\text{{Mean Deviation}} = \\frac{{ {mean_div_calc} }}{{ {len(data)} }} = \\textbf{{ { try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data)) } }}$")
 
 st.text("")
 
-st.markdown("**Median:**")
 
 if len(data)%2==0:
     st.markdown(f"Your data set has an even number of entries. Therefore, the median is the mean of the two middle terms:")
@@ -72,8 +70,8 @@ if len(data)%2==0:
     st.markdown(f"$\\text{{Median}} = \\frac{{ {try_int(sorted(data)[-1+len(data)//2])} + {try_int(sorted(data)[len(data)//2])} }}{{ 2 }} = \\textbf{{ {try_int(median_data)} }}$")
 else:
     st.markdown("Your data set has an odd number of entries. Therefore, the median is the middle term:")
-    median_calc=f"**{try_int(sorted(data)[len(data)//2])}**"
-    st.markdown(f"Median = {median_calc}")
+    #median_calc=f"**{try_int(sorted(data)[len(data)//2])}**"
+    st.markdown(f"$\\text{{Median}} = \\textbf{{ {try_int(sorted(data)[len(data)//2])} }}$")
 
 st.text("")
 
