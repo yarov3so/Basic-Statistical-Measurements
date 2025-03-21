@@ -39,12 +39,12 @@ st.text("")
 
 st.markdown(f"Your data set has **{len(data)}** entries.")
 
-st.markdown(f"Sorted in ascending order, they are: $ {[try_int(el) for el in sorted(data)]} $")
+st.markdown(f"Sorted in ascending order, they are: $ {[try_int(el) for el in sorted(data)]} $ .")
 
 st.text("")
 
 st.markdown(f"**Range:**")
-st.markdown(f"Range = Maximum value - Minimum value = {try_int(max(data))} - {try_int(min(data))} = **{try_int(max(data)-min(data))}**")
+st.markdown(f"$ \\text{{Range}} = \\text{{Maximum value}} - \\text{{Minimum value}} = {try_int(max(data))} - {try_int(min(data))} = **{try_int(max(data)-min(data))}** $")
 
 st.text("")
 
