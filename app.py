@@ -48,22 +48,19 @@ st.markdown(f"$\\text{{Range}} =$ Maximum value $-$ Minimum value $=  {try_int(m
 
 st.text("")
 
-mean_data=round(mean_data,2)
-mean_data=try_int(mean_data)
-
 mean_calc=" + ".join([str(try_int(val)) for val in data]) #+" )"+" / "+f"{len(data)}" + " = " + f"**{mean_data}**"
 st.markdown("**Mean:**")
-st.markdown(f"$\\text{{Mean}} = \\frac{{ {mean_calc} }}{{ {len(data)} }} = \\textbf{{ {mean_data} }}$")
+st.markdown(f"$\\text{{Mean}} = \\frac{{ {mean_calc} }}{{ {len(data)} }} = \\textbf{{ {try_int(mean_data)} }}$")
 
 st.text("")
 
 mean_div_calc=""
 for val in data:
-    mean_div_calc+=" | "+f"{try_int(val)} - "+f"{try_int(round(mean_data,2))} |  + "
-mean_div_calc="( "+mean_div_calc[:-2]+f") / {len(data)}  =  **{try_int(round((sum(abs(data-mean_data*np.ones(len(data)))))/len(data),2))}**"
+    mean_div_calc+=" | "+f"{try_int(val)} - "+f"{try_int(mean_data)} |  + "
+mean_div_calc=mean_div_calc[:-2] #+f") / {len(data)}  =  **{try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data))}**"
 
 st.markdown("**Mean Deviation:**")
-st.markdown(f"Mean Deviation = {mean_div_calc}")
+st.markdown(f"$ \\text{{ Mean Deviation }} = \\frac{{ {mean_div_calc} }}{{ {len(data)} }} = \\textbf{{ { try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data)) } }}$")
 
 st.text("")
 
