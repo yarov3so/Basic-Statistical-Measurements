@@ -19,11 +19,19 @@ mean_data=data.mean()
 if int(mean_data)==float(mean_data):
     mean_data=int(mean_data)
 
-def try_int(val):
-    if int(val)==float(val):
-        return int(val)
+def try_int(num):
+    
+    num_int=None
+    try:
+        num_int=int(num)
+    except:
+        None
+    if num==num_int:
+        return num_int
+    elif (num<=0.1 and num>=0) or (num>=-0.1 and num<=0):
+        return "{:.2g}".format(float(num))
     else:
-        return float(val)
+        return round(float(num),2)
 
 median_data=stat.median(data)
 
