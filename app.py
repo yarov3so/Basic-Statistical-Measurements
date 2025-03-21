@@ -6,8 +6,6 @@ st.title("Basic Statistical Measurements")
 
 st.markdown("Calculates range, mean, mean deviation, median and mode(s), if any.")
 
-st.markdown("*by yarov3so*")
-
 data_str=st.text_input("Enter all the numerical entries that appear in your data set, separated by commas:")
 
 if data_str=="":
@@ -102,5 +100,6 @@ else:
     st.markdown(f"Your data set has the following modes: {modes_str}")
 
 st.text("")
-st.markdown("""*See my other [Math Help Tools](https://mathh3lptools.streamlit.app)*   
+st.markdown("*Crafted by yarov3so*")
+st.markdown("""See my other [Math Help Tools](https://mathh3lptools.streamlit.app)   
 <a href="https://www.buymeacoffee.com/yarov3so" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="width: 9em; height: auto; padding-top: 1em;" ></a>""",unsafe_allow_html=True)
