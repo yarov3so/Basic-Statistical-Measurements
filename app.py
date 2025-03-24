@@ -2,6 +2,11 @@ import numpy as np
 import statistics as stat
 import streamlit as st
 
+st.set_page_config(
+    page_title="Basic Statistical Measurements",
+    page_icon="MHT.png", 
+)
+
 st.title("Basic Statistical Measurements")
 
 st.markdown("Calculates range, mean, mean deviation, median and mode(s), if any.")
