@@ -49,7 +49,7 @@ st.markdown(f"Sorted in ascending order, they are: $ {[try_int(el) for el in sor
 st.text("")
 
 
-st.markdown(f"$\\textbf{{Range}} =$ Maximum value $-$ Minimum value $=  {try_int(max(data))} - {try_int(min(data))} = \\textbf{{{try_int(max(data)-min(data))}}}$")
+st.markdown(f"$\\textbf{{Range}} =$ Maximum value $-$ Minimum value $=  {try_int(max(data))} - ({try_int(min(data))}) = \\textbf{{{try_int(max(data)-min(data))}}}$")
 
 st.text("")
 
@@ -61,7 +61,7 @@ st.text("")
 
 mean_div_calc=""
 for val in data:
-    mean_div_calc+=" | "+f"{try_int(val)} - "+f"{try_int(mean_data)} |  + "
+    mean_div_calc+=" | "+f"{try_int(val)} - "+f"({try_int(mean_data)}) |  + "
 mean_div_calc=mean_div_calc[:-2] #+f") / {len(data)}  =  **{try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data))}**"
 
 mean_div_calc2=""
