@@ -72,7 +72,7 @@ for val in data:
     mean_div_calc2+=f" {try_int(abs(val-mean_data))} +"
 mean_div_calc2=mean_div_calc2[:-2]
 
-st.markdown(f"$\\textbf{{Mean Deviation}} = \\frac{{ {mean_div_calc} }}{{ {len(data)} }} = \\frac{{ {mean_div_calc2} }}{{ {len(data)} }} = \\frac{{ {(sum(abs(data-mean_data*np.ones(len(data)))))} }}{{ {len(data)} }} = \\textbf{{ { try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data)) } }}$")
+st.markdown(f"$\\textbf{{Mean Deviation}} = \\frac{{ {mean_div_calc} }}{{ {len(data)} }} = \\frac{{ {mean_div_calc2} }}{{ {len(data)} }} = \\frac{{ {(try_int( sum(abs(data-mean_data*np.ones(len(data)))))} ) }}{{ {len(data)} }} = \\textbf{{ { try_int((sum(abs(data-mean_data*np.ones(len(data)))))/len(data)) } }}$")
 
 st.text("")
 
