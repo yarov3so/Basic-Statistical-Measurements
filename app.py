@@ -53,7 +53,7 @@ st.markdown(f"$\\textbf{{Range}} =$ Maximum value $-$ Minimum value $=  {try_int
 
 st.text("")
 
-mean_calc=" + ".join([str(try_int(val)) for val in data if val>=0 else "("+str(try_int(val))+")" ]) #+" )"+" / "+f"{len(data)}" + " = " + f"**{mean_data}**"
+mean_calc=" + ".join([str(try_int(val)) if val>=0 else "("+str(try_int(val))+")" for val in data ]) #+" )"+" / "+f"{len(data)}" + " = " + f"**{mean_data}**"
 
 st.markdown(f"$\\textbf{{Mean}} = \\frac{{ {mean_calc} }}{{ {len(data)} }} = \\textbf{{ {try_int(mean_data)} }}$")
 
